@@ -126,7 +126,7 @@ Perché ti interessa l'open source
         <section className="reflection-section">
           <h2>{t.lab1.reflection}</h2>
           <ul>
-            {t.lab3.reflectionQuestions.map((question, index) => (
+            {t.lab3.reflectionQuestions.map((question: string, index: number) => (
               <li key={index}>{question}</li>
             ))}
           </ul>

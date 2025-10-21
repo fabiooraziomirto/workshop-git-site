@@ -1,6 +1,16 @@
 import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 
+interface LinkItem {
+  title: string;
+  url: string;
+}
+
+interface IssueItem {
+  problem: string;
+  solution: string;
+}
+
 const Resources: React.FC = () => {
   const { t } = useLanguage();
 
@@ -56,7 +66,7 @@ const Resources: React.FC = () => {
         <section className="links-section">
           <h2>Link Utili</h2>
           <div className="links-grid">
-            {t.resources.links.map((link, index) => (
+            {t.resources.links.map((link: LinkItem, index: number) => (
               <div key={index} className="link-card">
                 <h3>{link.title}</h3>
                 <a href={link.url} target="_blank" rel="noopener noreferrer" className="btn btn-outline">
@@ -87,7 +97,7 @@ const Resources: React.FC = () => {
         <section className="troubleshooting-section">
           <h2>{t.resources.troubleshooting}</h2>
           <div className="issues-list">
-            {t.resources.commonIssues.map((issue, index) => (
+            {t.resources.commonIssues.map((issue: IssueItem, index: number) => (
               <div key={index} className="issue-item">
                 <h4>❌ {issue.problem}</h4>
                 <p>✅ {issue.solution}</p>
@@ -99,7 +109,7 @@ const Resources: React.FC = () => {
         <section className="final-notes-section">
           <h2>{t.resources.finalNotes}</h2>
           <div className="tips-list">
-            {t.resources.finalTips.map((tip, index) => (
+            {t.resources.finalTips.map((tip: string, index: number) => (
               <div key={index} className="tip-item">
                 <span className="tip-icon">💡</span>
                 <span>{tip}</span>

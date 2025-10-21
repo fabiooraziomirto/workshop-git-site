@@ -13,7 +13,7 @@ const Introduction: React.FC = () => {
           <h2>{t.intro.prerequisites}</h2>
           <p>{t.intro.prerequisitesText}</p>
           <ul>
-            {t.intro.prerequisitesList.map((item, index) => (
+            {t.intro.prerequisitesList.map((item: string, index: number) => (
               <li key={index}>{item}</li>
             ))}
           </ul>

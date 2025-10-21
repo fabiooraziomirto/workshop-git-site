@@ -124,7 +124,7 @@ const Lab2: React.FC = () => {
         <section className="reflection-section">
           <h2>{t.lab1.reflection}</h2>
           <ul>
-            {t.lab2.reflectionQuestions.map((question, index) => (
+            {t.lab2.reflectionQuestions.map((question: string, index: number) => (
               <li key={index}>{question}</li>
             ))}
           </ul>
