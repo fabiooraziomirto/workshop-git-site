@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 
+
 const Home: React.FC = () => {
   const { t } = useLanguage();
 

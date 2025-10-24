@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { Link } from 'react-router-dom';
 
 const Lab3: React.FC = () => {
   const { t } = useLanguage();
@@ -141,8 +142,12 @@ Perché ti interessa l'open source
         </div>
 
         <div className="navigation-links">
-          <a href="/lab2" className="btn btn-outline">← Lab 2: Repository Remoti</a>
-          <a href="/resources" className="btn btn-primary">Risorse Utili →</a>
+          <Link to="/lab2" className="btn btn-outline">
+            ← Lab 2: Repository Remoti
+          </Link>
+          <Link to="/resources" className="btn btn-primary">
+            Risorse Utili →
+          </Link>
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { Link } from 'react-router-dom';
 
 const Lab1: React.FC = () => {
   const { t } = useLanguage();
@@ -115,8 +116,12 @@ const Lab1: React.FC = () => {
         </div>
 
         <div className="navigation-links">
-          <a href="/intro" className="btn btn-outline">← Introduzione</a>
-          <a href="/lab2" className="btn btn-primary">Lab 2: Repository Remoti →</a>
+          <Link to="/intro" className="btn btn-outline">
+            ← Introduzione
+          </Link>
+          <Link to="/lab2" className="btn btn-primary">
+            Lab 2: Repository Remoti →
+          </Link>
         </div>
       </div>
     </div>

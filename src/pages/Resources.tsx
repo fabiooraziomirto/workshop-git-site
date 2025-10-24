@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { Link } from 'react-router-dom';
 
 interface LinkItem {
   title: string;
@@ -127,8 +128,12 @@ const Resources: React.FC = () => {
         </div>
 
         <div className="navigation-links">
-          <a href="/lab3" className="btn btn-outline">← Lab 3: Fork e Pull Request</a>
-          <a href="/" className="btn btn-primary">Torna alla Home →</a>
+          <Link to="/lab3" className="btn btn-outline">
+            ← Lab 3: Fork e Pull Request
+          </Link>
+          <Link to="/" className="btn btn-primary">
+            Homepage →
+          </Link>
         </div>
       </div>
     </div>

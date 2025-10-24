@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { Link } from 'react-router-dom';
 
 const Introduction: React.FC = () => {
   const { t } = useLanguage();
@@ -51,8 +52,10 @@ const Introduction: React.FC = () => {
             <strong> Lab 1: Stage e Commit</strong>, dove imparerai i concetti fondamentali di Git.
           </p>
           <div className="action-buttons">
-            <a href="/lab1" className="btn btn-primary">Inizia Lab 1</a>
-          </div>
+                    <Link to="/lab1" className="btn btn-outline">
+                      ← Lab 1: Stage e Commit
+                    </Link>
+                  </div>
         </section>
       </div>
     </div>
